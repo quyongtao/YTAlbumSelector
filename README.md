@@ -1,9 +1,9 @@
 # YTAlbumSelector
-@interface ViewController ()<YTAssetPickerNavViewControllerDelegate>
+@interface ViewController ()<YTAssetPickerNavViewControllerDelegate><br/>
 @end
 
-@implementation ViewController
-- (void)test{
+@implementation ViewController<br/>
+``- (void)test{<br/>
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"YTAsset" bundle:nil];
 
     YTAssetGroupViewController *groupVC = [storyBoard instantiateViewControllerWithIdentifier:@"YTAssetGroupViewControllerID"];
@@ -21,13 +21,13 @@
     pickNav.globalSelectedArray = [self.currentSelectedAssetsArray mutableCopy];// 当前已经选择过的图片asset数组，方便进入相册后匹配已经选择过的图片
 
     [self presentViewController:pickNav animated:YES completion:nil];
-}
+``}<br/>
 #pragma 图片选择器的代理方法
 /**
  * 只需实现这一个代理方法即可完成相册图片的选择
  *
 */
-- (void)didFinishPickerAssets:(NSMutableArray *)assets{
+``- (void)didFinishPickerAssets:(NSMutableArray *)assets{<br/>
     
     // 1.处理实际业务逻辑
     //*****
@@ -49,5 +49,7 @@
     // 3.根据业务需求处理TODO
     
     
-}
+``}<br/>
 @end
+![image](demo1.jpg)
+![image](demo2.jpg)
