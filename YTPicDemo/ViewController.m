@@ -127,8 +127,8 @@
         [self.currentSelectedAssetsArray addObject:asset];
         
     }
-    
-    
+    //
+    // 处理自身的业务逻辑
     [self buildUIImageView:self.currentSelectedAssetsArray];
 }
 - (void)buildUIImageView:(NSMutableArray *)assetImageArray
